@@ -111,10 +111,14 @@ $value in $theme-colors {
   margin: 0.38rem 0 0.75rem;
 }
 
+.text-mute {
+  color: #76b4cc;
+}
+
 .card-title {
   font-family: $type-2;
   font-weight: 500;
-  color: #404852;
+  color: #2271d4;
   margin-bottom: 22px;
   font-size: 14px;
   text-transform: capitalize;

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from './category.service';
+import { CategoryService } from '../category/category.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-category',
-  templateUrl: './category.component.html',
-  styleUrls: ['./category.component.scss']
+  selector: 'app-category-detail',
+  templateUrl: './category-detail.component.html',
+  styleUrls: ['./category-detail.component.scss']
 })
-export class CategoryComponent implements OnInit {
+export class CategoryDetailComponent implements OnInit {
 
   listCategory: any = [];
   constructor(
@@ -20,6 +20,7 @@ export class CategoryComponent implements OnInit {
   }
 
   openCategory(id_category) {
-    this.router.navigate(['/category/detail']);
+    this.router.navigate(['/category-detail']);
   }
+
 }
