@@ -27,6 +27,8 @@ import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { CategoryComponent } from './view/category/category.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CategoryDetailComponent } from './view/category-detail/category-detail.component';
 
 @NgModule({
   declarations: [
@@ -50,14 +52,16 @@ import { CategoryComponent } from './view/category/category.component';
     TooltipsComponent,
     CarouselComponent,
     TabsComponent,
-    CategoryComponent
+    CategoryComponent,
+    CategoryDetailComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

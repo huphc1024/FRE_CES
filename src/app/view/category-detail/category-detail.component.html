@@ -1,0 +1,33 @@
+<div class="main">
+  <div class="search">
+    <form class="forms-sample display_flex">
+      <div class="col-md-2"></div>
+      <div class="form-group col-md-6">
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nhập danh mục để tìm">
+      </div>
+      <div class="form-group col-md-4 ">
+        <button type="submit" class="btn btn-success mr-2">Search</button>
+        <button class="btn btn-light">Reset</button>
+      </div>
+    </form>
+  </div>
+  <div class="hot-key">
+    <div class="badge badge-info badge-pill">quần áo</div>
+  </div>
+  <div class="recommender"></div>
+  <div class="category-sub">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 grid-margin stretch-card" *ngFor="let data of listCategory">
+        <div class="card">
+          <div class="card-body pd-unset display_flex">
+            <img src="assets/images/faces/face1.jpg" class="mr-10p image-category">
+            <div class="card-right cuiso" (click)="openCategory(data.category_id)">
+              <h4 class="card-title">{{data.name}}</h4>
+              <p class="card-description text-mute">{{data.title}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

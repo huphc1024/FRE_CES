@@ -18,6 +18,7 @@ import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { CategoryComponent } from './view/category/category.component';
+import { CategoryDetailComponent } from './view/category-detail/category-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -37,7 +38,13 @@ const routes: Routes = [
   { path: 'tooltips', component: TooltipsComponent },
   { path: 'carousel', component: CarouselComponent },
   { path: 'tabs', component: TabsComponent },
-  { path: 'category', component: CategoryComponent },
+  { 
+    path: 'category',
+    component: CategoryComponent,
+    children: [
+      { path: 'detail', component: CategoryDetailComponent },
+    ]
+   },
 ];
 
 @NgModule({
