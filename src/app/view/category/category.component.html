@@ -14,10 +14,10 @@
     <div class="col-md-4 col-sm-6 grid-margin stretch-card" *ngFor="let data of listCategory">
         <div class="card">
             <div class="card-body pd-unset display_flex">
-                <img src="assets/images/faces/face1.jpg" class="mr-10p image-category">
-                <div class="card-right cuiso" (click)="openCategory(data.category_id)">
-                    <h4 class="card-title">{{data.name}}</h4>
-                    <p class="card-description text-mute">{{data.title}}</p>
+                <img src="assets/images/mebe.jpg" class="mr-10p image-category">
+                <div class="card-right cuiso" (click)="openCategory(data.categorySiteId, data.categoryName)">
+                    <h4 class="card-title">{{data.categoryName}}</h4>
+                    <p class="card-description text-mute">{{data.categoryName}}</p>
                 </div>
             </div>
         </div>

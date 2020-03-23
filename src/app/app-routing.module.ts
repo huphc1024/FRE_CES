@@ -38,11 +38,11 @@ const routes: Routes = [
   { path: 'tooltips', component: TooltipsComponent },
   { path: 'carousel', component: CarouselComponent },
   { path: 'tabs', component: TabsComponent },
-  { 
+  {
     path: 'category',
-    component: CategoryComponent,
     children: [
-      { path: 'detail', component: CategoryDetailComponent },
+      { path: '', component: CategoryComponent },
+      { path: ':id', component: CategoryDetailComponent },
     ]
    },
 ];
