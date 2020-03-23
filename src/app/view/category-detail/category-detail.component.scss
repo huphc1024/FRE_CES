@@ -26,6 +26,37 @@
     height: 80%;
     padding: 15px 0 0 15px;
 }
+.card-right :hover {
+  text-decoration: underline;
+}
 .search {
   margin-bottom: 20px;
 }
+.hot-key {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.hot-key-name  {
+  margin: 0 2px;
+}
+.recommended {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.title-recomended {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recommended {
+  margin-bottom: 50px;
+  padding: 20px;
+}
+.table-product {
+  height: auto !important;
+  border:  unset;
+  box-shadow: unset;
+}
+

@@ -1,0 +1,17 @@
+.main-product {
+  position: absolute;
+  top: 63px;
+  right: 0;
+  width: calc(100% - 255px);
+  background: #2bafe22e;
+  min-height: calc(100vh - 63px);
+}
+.main-right {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  min-height: calc(100vh - 63px);
+}
+

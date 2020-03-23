@@ -29,6 +29,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { CategoryComponent } from './view/category/category.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryDetailComponent } from './view/category-detail/category-detail.component';
+import { ProductDetailComponent } from './view/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { CategoryDetailComponent } from './view/category-detail/category-detail.
     CarouselComponent,
     TabsComponent,
     CategoryComponent,
-    CategoryDetailComponent
+    CategoryDetailComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
