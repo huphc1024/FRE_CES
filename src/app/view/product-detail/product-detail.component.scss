@@ -4,7 +4,7 @@
   right: 0;
   width: calc(100% - 255px);
   background: #2bafe22e;
-  min-height: calc(100vh - 63px);
+  height: calc(100vh - 63px);
 }
 .main-right {
   width: 50%;
@@ -12,6 +12,26 @@
   right: 0;
   top: 0;
   background-color: white;
-  min-height: calc(100vh - 63px);
+  height: calc(100vh - 63px);
+  overflow-y: scroll;
 }
-
+.main {
+  display: flex;
+  .left {
+    width: 40%;
+    height: 100vh;
+    margin-right: 10%;
+    margin-left: 5%;
+    background-color: blue;
+  }
+  .right {
+    width: 40%;
+    height: 100vh;
+    background-color: red;
+  }
+}
+.title {
+  padding-left: 10%;
+  padding-top: 5px;
+  margin-bottom: 30px;
+}

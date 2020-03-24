@@ -15,6 +15,7 @@ export class CategoryDetailComponent implements OnInit {
   showProduct = false;
   showDetailProduct = false;
   parentName;
+  isLoading = false;
   constructor(
     private categoryService: CategoryService,
     private router: Router,
@@ -40,9 +41,11 @@ export class CategoryDetailComponent implements OnInit {
 
   loadProduct() {
     this.showProcess = true;
+    this.isLoading = true;
     setTimeout( () => {
       this.showProcess = false;
       this.showProduct = true;
+      this.isLoading = false;
     }, 3000);
     this.showListProduct = true;
   }
