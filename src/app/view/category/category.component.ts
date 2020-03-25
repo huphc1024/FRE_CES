@@ -16,10 +16,10 @@ export class CategoryComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.categoryService.getListCategory().subscribe( res => {
-      this.listCategory = res;
-    });
-    // this.listCategory = this.categoryService.dataCategory;
+    // this.categoryService.getListCategory().subscribe( res => {
+    //   this.listCategory = res;
+    // });
+    this.listCategory = this.categoryService.listCategories;
   }
 
   openCategory(id_category, name) {
