@@ -27,9 +27,10 @@ export class CategoryDetailComponent implements OnInit {
     const id;
     // @ts-ignore
     this.route.params.subscribe( params => id = params.id);
-    this.categoryService.getListSubCategory(id).subscribe( res => {
-      this.listCategory = res;
-    });
+    // this.categoryService.getListSubCategory(id).subscribe( res => {
+    //   this.listCategory = res;
+    // });
+    this.listCategory = this.categoryService.listCategories;
     this.parentName = this.categoryService.categoryParrent;
   }
 
