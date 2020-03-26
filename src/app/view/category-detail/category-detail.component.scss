@@ -142,7 +142,7 @@
 }
 .la-line-scale-pulse-out.la-2x > div {
   width: 8px;
-  height: 64px;
+  height: 45px;
   margin: 4px;
   margin-top: 0;
   margin-bottom: 0;
@@ -152,9 +152,8 @@
   height: 96px;
 }
 .la-line-scale-pulse-out.la-3x > div {
-  width: 12px;
-  height: 96px;
-  margin: 6px;
+  width: 8px;
+  height: 45px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -256,4 +255,9 @@
   margin-bottom: 15px;
   margin-top: 10px;
   font-size: 16px;
+}
+.shop-time {
+  display: flex;
+  align-items: center;
+  width: 10%;
 }

@@ -16,6 +16,7 @@ export class CategoryDetailComponent implements OnInit {
   showDetailProduct = false;
   parentName;
   isLoading = false;
+  listShop = [];
   constructor(
     private categoryService: CategoryService,
     private router: Router,
@@ -30,6 +31,9 @@ export class CategoryDetailComponent implements OnInit {
     this.categoryService.getListSubCategory(id).subscribe( res => {
       this.listCategory = res;
     });
+    this.categoryService.getListShop().subscribe( (res: any) => {
+      this.listShop = res.data.items;
+    })
     this.parentName = this.categoryService.categoryParrent;
   }
 
@@ -45,7 +49,7 @@ export class CategoryDetailComponent implements OnInit {
     setTimeout( () => {
       this.showProcess = false;
       this.showProduct = true;
-      // this.isLoading = false;
+      this.isLoading = false;
     }, 3000);
     this.showListProduct = true;
   }

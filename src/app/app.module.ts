@@ -30,6 +30,7 @@ import { CategoryComponent } from './view/category/category.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryDetailComponent } from './view/category-detail/category-detail.component';
 import { ProductDetailComponent } from './view/product-detail/product-detail.component';
+import {TooltipModule} from 'ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { ProductDetailComponent } from './view/product-detail/product-detail.com
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

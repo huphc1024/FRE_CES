@@ -43,4 +43,8 @@ export class CategoryService {
     // @ts-ignore
     return this.http.get(PathAPI.GET_CATEGORIES, {params});
   }
+
+  getListShop() {
+    return this.http.get(PathAPI.GET_SHOP);
+  }
 }
