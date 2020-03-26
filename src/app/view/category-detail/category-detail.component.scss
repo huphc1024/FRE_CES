@@ -14,6 +14,10 @@
     box-shadow: #04040436 3px 3px;
     height: 100px !important;
 }
+.card-shop {
+    height: 100px !important;
+  background-color: white;
+}
 .image-category {
     width: 20%;
     height: 80%;
@@ -235,4 +239,21 @@
 }
 .table th, .table td {
   padding: 10px;
+}
+.image-shop {
+  width: 5%;
+  margin: 20px;
+  border-radius: 5px;
+  border: #26155a73 solid 1px;
+  box-shadow: #130f0f85 3px 3px;
+}
+.shop {
+  padding-left: unset !important;
+  padding-right: unset !important;
+  margin: 20px 0;
+}
+.card-shop-title {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 16px;
 }

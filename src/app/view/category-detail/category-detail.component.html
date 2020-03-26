@@ -145,14 +145,30 @@
         <div class="card">
           <div class="card-body pd-unset display_flex">
             <img src="assets/images/lamdep.jpg" class="mr-10p image-category">
-            <div *ngIf="data.isParent == '1'" class="card-right" (click)="openCategory(data.categorySiteId)">
+            <div *ngIf="data.isParent == '1'" class="card-right" (click)="openCategory(data.categoryId)">
               <h4 class="card-title">{{data.categoryName}}</h4>
               <p class="card-description text-mute">{{data.categoryName}}</p>
             </div>
-            <div *ngIf="data.isParent == '0'" class="card-right cuiso" (click)="openCategory(data.categorySiteId)">
+            <div *ngIf="data.isParent == '0'" class="card-right cuiso" (click)="openCategory(data.categoryId)">
               <h4 class="card-title">{{data.categoryName}}</h4>
               <p class="card-description text-mute">{{data.categoryName}}</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-shop">
+    <div class="col-md-12 col-sm-6 shop">
+      <div class="card-shop">
+        <div class="card-body pd-unset display_flex">
+          <img src="assets/images/lamdep.jpg" class="mr-10p image-shop">
+          <div class="card-right cuiso">
+            <h4 class="card-title card-shop-title">SHOPAJAJAAJ</h4>
+            <p class="card-description text-mute">cccc</p>
+          </div>
+          <div class="shop-time m">
+            <i class="fa fa-calendar"></i> 26/03/2020
           </div>
         </div>
       </div>

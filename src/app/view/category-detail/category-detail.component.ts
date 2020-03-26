@@ -27,10 +27,9 @@ export class CategoryDetailComponent implements OnInit {
     const id;
     // @ts-ignore
     this.route.params.subscribe( params => id = params.id);
-    // this.categoryService.getListSubCategory(id).subscribe( res => {
-    //   this.listCategory = res;
-    // });
-    this.listCategory = this.categoryService.listCategories;
+    this.categoryService.getListSubCategory(id).subscribe( res => {
+      this.listCategory = res;
+    });
     this.parentName = this.categoryService.categoryParrent;
   }
 
@@ -46,7 +45,7 @@ export class CategoryDetailComponent implements OnInit {
     setTimeout( () => {
       this.showProcess = false;
       this.showProduct = true;
-      this.isLoading = false;
+      // this.isLoading = false;
     }, 3000);
     this.showListProduct = true;
   }
