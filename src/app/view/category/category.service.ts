@@ -44,7 +44,8 @@ export class CategoryService {
     return this.http.get(PathAPI.GET_CATEGORIES, {params});
   }
 
-  getListShop() {
-    return this.http.get(PathAPI.GET_SHOP);
+  getListShop(cId) {
+    const params = new HttpParams().set('categoryId', cId);
+    return this.http.get(PathAPI.GET_SHOP, {params});
   }
 }

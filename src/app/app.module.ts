@@ -27,10 +27,11 @@ import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { CategoryComponent } from './view/category/category.component';
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { CategoryDetailComponent } from './view/category-detail/category-detail.component';
 import { ProductDetailComponent } from './view/product-detail/product-detail.component';
 import {TooltipModule} from 'ng-bootstrap';
+import {JwtInterceptor} from './auth/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,7 @@ import {TooltipModule} from 'ng-bootstrap';
     HttpClientModule,
     TooltipModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

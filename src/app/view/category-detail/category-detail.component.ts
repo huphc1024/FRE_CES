@@ -31,7 +31,7 @@ export class CategoryDetailComponent implements OnInit {
     this.categoryService.getListSubCategory(id).subscribe( res => {
       this.listCategory = res;
     });
-    this.categoryService.getListShop().subscribe( (res: any) => {
+    this.categoryService.getListShop(id).subscribe( (res: any) => {
       this.listShop = res.data.items;
     })
     this.parentName = this.categoryService.categoryParrent;
