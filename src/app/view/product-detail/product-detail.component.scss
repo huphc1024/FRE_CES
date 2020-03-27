@@ -3,7 +3,7 @@
   top: 63px;
   right: 0;
   width: calc(100% - 255px);
-  background: #2bafe22e;
+  background: #010b0e6b;
   height: calc(100vh - 63px);
 }
 .main-right {
@@ -100,4 +100,36 @@
 }
 .mg-b30 {
   margin-bottom: 30px !important;
+}
+.type-product {
+  width: 90%;
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  p {
+    font-size: 18px;
+  }
+  .table {
+    thead {
+      tr {
+        th {
+          padding: 5px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+.display-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

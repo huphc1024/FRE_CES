@@ -12,5 +12,8 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  nothing(event) {
+    event.stopPropagation();
+  }
 
 }
