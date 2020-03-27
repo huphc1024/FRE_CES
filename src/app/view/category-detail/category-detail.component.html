@@ -11,6 +11,14 @@
       </div>
     </form>
   </div>
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom bg-inverse-primary">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">{{parentName}}</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Data</span></li>
+    </ol>
+  </nav>
+<!-- <div class="hot-key">-->
 <!--  <nav aria-label="breadcrumb" role="navigation">-->
 <!--    <ol class="breadcrumb breadcrumb-custom bg-inverse-primary">-->
 <!--      <li class="breadcrumb-item"><a href="#">Home</a></li>-->
@@ -18,13 +26,7 @@
 <!--      <li class="breadcrumb-item active" aria-current="page"><span>Data</span></li>-->
 <!--    </ol>-->
 <!--  </nav>-->
-  <div class="hot-key">
-    <div class="title-key-hot"><p class="text-gray">Từ khóa được nhiều lượt tìm kiếm</p></div>
-    <div class="hot-key-name badge badge-info badge-pill">quần áo</div>
-    <div class="hot-key-name badge badge-info badge-pill mr-10p">giày dép</div>
-    <div class="hot-key-name badge badge-info badge-pill mr-10p">băng vệ sinh</div>
-    <div class="hot-key-name badge badge-info badge-pill mr-10p">dạ hương</div>
-  </div>
+<!-- </div> -->
   <div class="recommended">
     <div class="title-recomended">
       <button type="button" class="btn btn-primary btn-fw" (click)="loadProduct()" *ngIf="!showListProduct">Đề suất sản
@@ -151,7 +153,7 @@
       <div class="col-md-4 col-sm-6 grid-margin stretch-card" *ngFor="let data of listCategory">
         <div class="card">
           <div class="card-body pd-unset display_flex">
-            <img src="assets/images/lamdep.jpg" class="mr-10p image-category">
+            <img [src]="data.imageUrl || 'assets/images/mebe.jpg'" class="mr-10p image-category">
             <div *ngIf="data.isParent == '1'" class="card-right" (click)="openCategory(data.categoryId)">
               <h4 class="card-title">{{data.categoryName}}</h4>
               <p class="card-description text-mute">{{data.categoryName}}</p>
@@ -171,74 +173,8 @@
         <div class="card-body pd-unset display_flex">
           <img src="{{data.logo_pc_url}}" class="mr-10p image-shop">
           <div class="card-right cuiso" style="width: 30%;">
-            <h4 class="card-title card-shop-title">{{data.shop_name}}</h4>
+            <a class="card-title card-shop-title" target="_blank" href="{{data.seo_url}}">{{data.shop_name}}</a>
             <p class="card-description text-mute">{{data.username}}</p>
-          </div>
-          <div class="shop-time">
-            <div style="height: 20px" placement="top" ngbTooltip="Ngày tham gia" container="body">
-              <i class="fa fa-calendar"></i> 26/03/2020
-            </div>
-          </div>
-          <div class="shop-time">
-            <i class="fa fa-cubes" placement="top" ngbTooltip="Số sản phẩm" container="body"></i>
-          </div>
-          <div class="shop-time">
-            <i class="fa fa-group" placement="top" ngbTooltip="Số người theo dõi" container="body"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-12 col-sm-6 shop">
-      <div class="card-shop">
-        <div class="card-body pd-unset display_flex">
-          <img src="assets/images/lamdep.jpg" class="mr-10p image-shop">
-          <div class="card-right cuiso" style="width: 30%;">
-            <h4 class="card-title card-shop-title">SHOPAJAJAAJ</h4>
-            <p class="card-description text-mute">cccc</p>
-          </div>
-          <div class="shop-time">
-            <div style="height: 20px" placement="top" ngbTooltip="Ngày tham gia" container="body">
-              <i class="fa fa-calendar"></i> 26/03/2020
-            </div>
-          </div>
-          <div class="shop-time">
-            <i class="fa fa-cubes" placement="top" ngbTooltip="Số sản phẩm" container="body"></i>
-          </div>
-          <div class="shop-time">
-            <i class="fa fa-group" placement="top" ngbTooltip="Số người theo dõi" container="body"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-12 col-sm-6 shop">
-      <div class="card-shop">
-        <div class="card-body pd-unset display_flex">
-          <img src="assets/images/lamdep.jpg" class="mr-10p image-shop">
-          <div class="card-right cuiso" style="width: 30%;">
-            <h4 class="card-title card-shop-title">SHOPAJAJAAJ</h4>
-            <p class="card-description text-mute">cccc</p>
-          </div>
-          <div class="shop-time">
-            <div style="height: 20px" placement="top" ngbTooltip="Ngày tham gia" container="body">
-              <i class="fa fa-calendar"></i> 26/03/2020
-            </div>
-          </div>
-          <div class="shop-time">
-            <i class="fa fa-cubes" placement="top" ngbTooltip="Số sản phẩm" container="body"></i>
-          </div>
-          <div class="shop-time">
-            <i class="fa fa-group" placement="top" ngbTooltip="Số người theo dõi" container="body"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-12 col-sm-6 shop">
-      <div class="card-shop">
-        <div class="card-body pd-unset display_flex">
-          <img src="assets/images/lamdep.jpg" class="mr-10p image-shop">
-          <div class="card-right cuiso" style="width: 30%;">
-            <h4 class="card-title card-shop-title">SHOPAJAJAAJ</h4>
-            <p class="card-description text-mute">cccc</p>
           </div>
           <div class="shop-time">
             <div style="height: 20px" placement="top" ngbTooltip="Ngày tham gia" container="body">
