@@ -28,6 +28,7 @@
 .ecd-w-h__100 {
     border  : 1px solid #ffbd6c;
     overflow: auto;
+    max-height: calc(100vh - 110px);
 }
 
 table {

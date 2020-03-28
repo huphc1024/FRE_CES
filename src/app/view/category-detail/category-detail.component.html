@@ -46,7 +46,7 @@
         </form>
       </div>
       <div class="card-body">
-        <app-table class="ecd-w__100" (onShowDetail)="openProduct($event)"></app-table>
+        <app-table class="ecd-w__100" (evShowDataDetail)="openProduct($event)"></app-table>
       </div>
     </div>
   </div>
@@ -97,7 +97,7 @@
     </div>
   </div>
 </div>
-<app-product-detail *ngIf="showDetailProduct" (click)="closeDetailProduct($event)"></app-product-detail>
+<app-product-detail *ngIf="showDetailProduct" (click)="closeDetailProduct($event)" [data]="productDetail"></app-product-detail>
 <div class="loading" *ngIf="isLoading">
   <div class="la-line-scale-pulse-out la-3x">
     <div></div>
