@@ -54,7 +54,8 @@ export class CategoryDetailComponent implements OnInit {
     this.showListProduct = true;
   }
 
-  openProduct() {
+  openProduct(event) {
+    console.log(event);
     this.showDetailProduct = true;
   }
   closeDetailProduct(event) {

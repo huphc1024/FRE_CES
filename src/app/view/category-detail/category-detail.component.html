@@ -34,7 +34,7 @@
       </button>
     </div>
     <div class="card table-product" *ngIf="showProduct">
-      <div class="search">
+      <div>
         <form class="forms-sample display_flex">
           <div class="col-md-6"></div>
           <div class="form-group col-md-4">
@@ -46,102 +46,7 @@
         </form>
       </div>
       <div class="card-body">
-        <div class="table-responsive">
-          <table class="table table-bordered">
-            <thead>
-            <tr>
-              <th>
-                #
-              </th>
-              <th>
-                Hình
-              </th>
-              <th>
-                Sản phẩm
-              </th>
-              <th>
-                Thời gian
-              </th>
-              <th>
-                Giảm giá
-              </th>
-              <th>
-                Giá
-              </th>
-              <th>
-                Cân nặng
-              </th>
-              <th>
-                Kho
-              </th>
-              <th>
-                B.Luận
-              </th>
-              <th>
-                Xem
-              </th>
-              <th>
-                Thích
-              </th>
-              <th>
-                Đánh giá
-              </th>
-              <th>
-                Đã bán
-              </th>
-              <th>
-                Doanh số
-              </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>
-                1
-              </td>
-              <td>
-                <img src="https://cf.shopee.vn/file/65543b91b5dc5b8309eea0623428d6a8">
-              </td>
-              <td class="to-link" (click)="openProduct()">
-                Album 7 Bst Áo Thun Unisex Form Rộng Mùa Hè Thời Trang Phong Cách Hàn Quốc…
-              </td>
-              <td>
-                2019-04-19
-              </td>
-              <td>
-                0%
-              </td>
-              <td>
-                29,000
-              </td>
-              <td>
-                0
-              </td>
-              <td>
-                449960
-              </td>
-              <td>
-                6296
-              </td>
-              <td>
-                39747
-              </td>
-              <td>
-                18213
-              </td>
-              <td>
-                4.54
-              </td>
-              <td>
-                23,066
-              </td>
-              <td>
-                574,343,400
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
+        <app-table class="ecd-w__100" (onShowDetail)="openProduct($event)"></app-table>
       </div>
     </div>
   </div>

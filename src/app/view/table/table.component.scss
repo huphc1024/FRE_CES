@@ -1,8 +1,138 @@
 ::ng-deep {
-    .mat-header-row {
-        position        : sticky;
-        position        : -webkit-sticky;
-        top             : 0;
-        background-color: inherit;
+
+    tr.mat-footer-row,
+    tr.mat-row {
+        height: 40px !important;
     }
+
+    th.mat-sort-header-sorted {
+        color: black;
+    }
+
+    .pagination {
+        margin-bottom: 0;
+    }
+
+    td.mat-cell:first-of-type,
+    td.mat-footer-cell:first-of-type,
+    th.mat-header-cell:first-of-type {
+        padding-left: 0;
+    }
+
+    tr:hover {
+        background: whitesmoke;
+        cursor    : pointer;
+    }
+}
+
+.ecd-w-h__100 {
+    border  : 1px solid #ffbd6c;
+    overflow: auto;
+}
+
+table {
+    min-width: 800px;
+    width    : 100%;
+}
+
+.ecd-btn__end {
+    align-items    : end;
+    justify-content: end;
+    justify-content: flex-end;
+    display        : inline-flex;
+    width          : 100%;
+    margin-bottom  : 10px;
+}
+
+.ecd-pagination {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+}
+
+.pagination {
+    margin-bottom: 0;
+}
+
+.ecd-img__thumbnail {
+    width           : 40px;
+    height          : 40px;
+    border-radius   : 100%;
+    background-color: #fff;
+}
+
+.ecd-selected__row {
+    background-color: #ffbd6c;
+}
+
+.mat-column-select {
+    width     : 40px;
+    text-align: center;
+}
+
+.mat-column-index {
+    text-align : center;
+    white-space: nowrap;
+    min-width  : 40px;
+    padding    : 0 10px;
+}
+
+.mat-column-thumbnail_url {
+    width      : 60px;
+    text-align : center;
+    white-space: nowrap;
+    padding    : 0 5px;
+    left       : 40px !important;
+}
+
+.mat-column-price {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-discount_rate {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-discount {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-review_count {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-favourite_count {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-rating_average {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-order_count {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+
+.mat-column-sales {
+    white-space: nowrap;
+    padding    : 0 5px;
+    text-align: right;
+}
+
+.mat-column-name {
+    min-width: 267px;
+}
+
+.ecd-chk__box-pos {
+    top     : 4px;
+    position: relative;
 }

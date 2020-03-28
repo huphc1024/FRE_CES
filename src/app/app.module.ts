@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -33,7 +34,10 @@ import { CategoryDetailComponent } from './view/category-detail/category-detail.
 import { ProductDetailComponent } from './view/product-detail/product-detail.component';
 import { TooltipModule } from 'ng-bootstrap';
 import { JwtInterceptor } from './auth/jwt.interceptor';
-
+import { TableComponent } from './view/table/table.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,20 +62,28 @@ import { JwtInterceptor } from './auth/jwt.interceptor';
     TabsComponent,
     CategoryComponent,
     CategoryDetailComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule,
     AppRoutingModule,
     FormsModule,
     NgbModule,
     HttpClientModule,
     TooltipModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCheckboxModule
   ],
   exports: [
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCheckboxModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]
