@@ -45,12 +45,6 @@ const routes: Routes = [
       { path: '', component: CategoryComponent },
       { path: ':id', component: CategoryDetailComponent },
     ]
-  },
-  {
-    path: 'product',
-    children: [
-      { path: '', component: ProductComponent },
-    ]
   }
 ];
 
