@@ -19,6 +19,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { CategoryComponent } from './view/category/category.component';
 import { CategoryDetailComponent } from './view/category-detail/category-detail.component';
+import { ProductComponent } from './view/product/product.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -44,7 +45,13 @@ const routes: Routes = [
       { path: '', component: CategoryComponent },
       { path: ':id', component: CategoryDetailComponent },
     ]
-   },
+  },
+  {
+    path: 'product',
+    children: [
+      { path: '', component: ProductComponent },
+    ]
+  }
 ];
 
 @NgModule({

@@ -28,12 +28,10 @@ import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { CategoryComponent } from './view/category/category.component';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CategoryDetailComponent } from './view/category-detail/category-detail.component';
 import { ProductDetailComponent } from './view/product-detail/product-detail.component';
-import { TooltipModule } from 'ng-bootstrap';
-import { JwtInterceptor } from './auth/jwt.interceptor';
-
+import { ProductComponent } from './view/product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +56,8 @@ import { JwtInterceptor } from './auth/jwt.interceptor';
     TabsComponent,
     CategoryComponent,
     CategoryDetailComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,13 +66,11 @@ import { JwtInterceptor } from './auth/jwt.interceptor';
     FormsModule,
     NgbModule,
     HttpClientModule,
-    TooltipModule,
     MatTableModule
   ],
   exports: [
-    MatTableModule
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
