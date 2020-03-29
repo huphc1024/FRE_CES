@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpParams, HttpClient, HttpHeaders} from '@angular/common/http';
-import { PathAPI } from '../../common/api_apth';
+import { PathAPI } from '../../common/api_path';
 
 @Injectable({
   providedIn: 'root'
