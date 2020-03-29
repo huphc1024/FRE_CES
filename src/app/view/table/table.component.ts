@@ -13,6 +13,7 @@ export class TableComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @Output() evShowDataDetail = new EventEmitter();
   checkAll = false;
+  rowSelected = {};
   pagination = {
     page: 1,
     pageSize: 10,
@@ -10543,8 +10544,8 @@ export class TableComponent implements OnInit {
     row['isChecked'] = !row['isChecked'];
     this.fillerCheckAllData();
   }
-  onSortData(event) {
-    console.log(event);
+  onNothing(event) {
+    event.stopPropagation();
   }
   onPaginatorBT(event) {
     this.pagination.page = event;
@@ -10556,6 +10557,7 @@ export class TableComponent implements OnInit {
     this.pagination.page = event.pageIndex + 1;
   }
   onShowDetail(ele) {
+    this.rowSelected = ele;
     this.evShowDataDetail.emit(ele);
   }
   onFilterData(event: Event) {
@@ -10566,10 +10568,14 @@ export class TableComponent implements OnInit {
     const arr = this.dataSource.data.filter((item) => {
       return item['isChecked'] === true;
     });
-    const text = arr.map((item) => item.name).join(' ');
+    // tslint:disable-next-line:prefer-const
+    let text = arr.map((item) => item.url_path);
+    for (let index = 0; index < text.length; index++) {
+      text[index] = 'https://tiki.vn/' + text[index];
+    }
     const node = document.createElement('textarea');
     const selection = document.getSelection();
-    node.textContent = text;
+    node.textContent = text.join(' ');
     document.body.appendChild(node);
     selection.removeAllRanges();
     node.select();
