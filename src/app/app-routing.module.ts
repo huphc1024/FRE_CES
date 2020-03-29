@@ -19,9 +19,11 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { CategoryComponent } from './view/category/category.component';
 import { CategoryDetailComponent } from './view/category-detail/category-detail.component';
+import {LoginComponent} from './login/login.component';
+import {SignUpComponent} from './sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/category', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'buttons', component: ButtonsComponent },
@@ -45,6 +47,8 @@ const routes: Routes = [
       { path: ':id', component: CategoryDetailComponent },
     ]
    },
+  { path: 'login', component: LoginComponent },
+  { path: 'sign-up', component: SignUpComponent },
 ];
 
 @NgModule({
