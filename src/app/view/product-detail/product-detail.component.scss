@@ -2,7 +2,6 @@
   position: absolute;
   top: 63px;
   right: 0;
-  z-index: 1000;
   width: calc(100% - 255px);
   background: #010b0e6b;
   height: calc(100vh - 63px);
@@ -13,7 +12,6 @@
   position: absolute;
   right: 0;
   top: 0;
-  min-width: 720px;
   background-color: white;
   height: calc(100vh - 63px);
   overflow-y: scroll;
