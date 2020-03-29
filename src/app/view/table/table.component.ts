@@ -58,7 +58,7 @@ export class TableComponent implements OnInit {
   }
   async onLoadData() {
     this.isLoading = true;
-    await this.tableSer.getListShopee(this.cateId, this.loadMore.toString()).toPromise().then((res: any) => {
+    await this.tableSer.getShopeeProduct(this.cateId, this.loadMore.toString()).toPromise().then((res: any) => {
       if (res && res.length > 0) {
         this.loadMore += 1;
         this.dataProduct = this.dataProduct.concat(res);
