@@ -73,7 +73,7 @@
     </div>
   </div>
   <div class="list-shop">
-    <div class="col-md-12 col-sm-6 shop" *ngFor="let data of listShop">
+    <div class="col-md-12 col-sm-6 shop" *ngFor="let data of listShopShopee">
       <div class="card-shop">
         <div class="card-body pd-unset display_flex">
           <img src="{{data.logo_pc_url}}" class="mr-10p image-shop">
@@ -81,17 +81,83 @@
             <a class="card-title card-shop-title" target="_blank" href="{{data.seo_url}}">{{data.shop_name}}</a>
             <p class="card-description text-mute">{{data.username}}</p>
           </div>
-          <div class="shop-time">
-            <div style="height: 20px" placement="top" ngbTooltip="Ngày tham gia" container="body">
-              <i class="fa fa-calendar"></i> 26/03/2020
-            </div>
+<!--          <div class="shop-time">-->
+<!--            <div style="height: 20px" placement="top" ngbTooltip="Ngày tham gia" container="body">-->
+<!--              <i class="fa fa-calendar"></i> 26/03/2020-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="shop-time">-->
+<!--            <i class="fa fa-cubes" placement="top" ngbTooltip="Số sản phẩm" container="body"></i>-->
+<!--          </div>-->
+<!--          <div class="shop-time">-->
+<!--            <i class="fa fa-group" placement="top" ngbTooltip="Số người theo dõi" container="body"></i>-->
+<!--          </div>-->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-6 shop" *ngFor="let data of listShopShopee">
+      <div class="card-shop">
+        <div class="card-body pd-unset display_flex">
+          <img src="{{data.logo_pc_url}}" class="mr-10p image-shop">
+          <div class="card-right cuiso" style="width: 30%;">
+            <a class="card-title card-shop-title" target="_blank" href="{{data.seo_url}}">{{data.shop_name}}</a>
+            <p class="card-description text-mute">{{data.username}}</p>
           </div>
-          <div class="shop-time">
-            <i class="fa fa-cubes" placement="top" ngbTooltip="Số sản phẩm" container="body"></i>
+<!--          <div class="shop-time">-->
+<!--            <div style="height: 20px" placement="top" ngbTooltip="Ngày tham gia" container="body">-->
+<!--              <i class="fa fa-calendar"></i> 26/03/2020-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="shop-time">-->
+<!--            <i class="fa fa-cubes" placement="top" ngbTooltip="Số sản phẩm" container="body"></i>-->
+<!--          </div>-->
+<!--          <div class="shop-time">-->
+<!--            <i class="fa fa-group" placement="top" ngbTooltip="Số người theo dõi" container="body"></i>-->
+<!--          </div>-->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-6 shop" *ngFor="let data of listShopTiki">
+      <div class="card-shop">
+        <div class="card-body pd-unset display_flex">
+<!--          <img src="assets/images/mebe.jpg" class="mr-10p image-shop">-->
+          <div class="card-right cuiso" style="width: 30%;">
+            <a class="card-title card-shop-title" target="_blank" href="{{data.display_value}}">{{data.display_value}}</a>
+<!--            <p class="card-description text-mute">{{data.display_value}}</p>-->
           </div>
-          <div class="shop-time">
-            <i class="fa fa-group" placement="top" ngbTooltip="Số người theo dõi" container="body"></i>
+<!--          <div class="shop-time">-->
+<!--            <div style="height: 20px" placement="top" ngbTooltip="Ngày tham gia" container="body">-->
+<!--              <i class="fa fa-calendar"></i> 26/03/2020-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="shop-time">-->
+<!--            <i class="fa fa-cubes" placement="top" ngbTooltip="Số sản phẩm" container="body"></i>-->
+<!--          </div>-->
+<!--          <div class="shop-time">-->
+<!--            <i class="fa fa-group" placement="top" ngbTooltip="Số người theo dõi" container="body"></i>-->
+<!--          </div>-->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-6 shop" *ngFor="let data of listShopSendo">
+      <div class="card-shop">
+        <div class="card-body pd-unset display_flex">
+          <img src="{{data.img_url}}" class="mr-10p image-shop">
+          <div class="card-right cuiso" style="width: 30%;">
+            <a class="card-title card-shop-title" target="_blank" href="{{data.shop_info.shop_name}}">{{data.shop_info.shop_name}}</a>
+<!--            <p class="card-description text-mute">{{data.shop_info.shop_name}}</p>-->
           </div>
+<!--          <div class="shop-time">-->
+<!--            <div style="height: 20px" placement="top" ngbTooltip="Ngày tham gia" container="body">-->
+<!--              <i class="fa fa-calendar"></i> 26/03/2020-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="shop-time">-->
+<!--            <i class="fa fa-cubes" placement="top" ngbTooltip="Số sản phẩm" container="body"></i>-->
+<!--          </div>-->
+<!--          <div class="shop-time">-->
+<!--            <i class="fa fa-group" placement="top" ngbTooltip="Số người theo dõi" container="body"></i>-->
+<!--          </div>-->
         </div>
       </div>
     </div>
