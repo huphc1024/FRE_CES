@@ -49,6 +49,7 @@
                 <mat-checkbox
                     class="ecd-chk__box-pos"
                     (change)="onSelectedRow($event, row)"
+                    (click)="onNothing($event)"
                     [checked]="row.isChecked"
                 >
                 </mat-checkbox>
@@ -99,6 +100,7 @@
             </th>
             <td
                 mat-cell
+                [title]="element.name"
                 *matCellDef="let element"
             >
                 {{element.name}}
@@ -231,6 +233,7 @@
             ></tr>
             <tr
                 mat-row
+                class="{{rowSelected.id == row.id ? 'ecd-selected': ''}}"
                 (click)="onShowDetail(row)"
                 *matRowDef="let row; columns: displayedColumnsTiKi; let i = index"
             ></tr>
