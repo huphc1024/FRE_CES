@@ -40,7 +40,6 @@ export class CategoryService {
 
   getListSubCategory(categorySiteId) {
     const params = new HttpParams().set('categoryId', categorySiteId);
-    // @ts-ignore
     return this.http.get(PathAPI.GET_CATEGORIES, {params});
   }
 
