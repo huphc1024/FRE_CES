@@ -26,16 +26,20 @@
 }
 
 .ecd-w-h__100 {
-    border  : 1px solid #ffbd6c;
-    overflow: auto;
-    max-height: calc(100vh - 110px);
+    border    : 1px solid #ffbd6c;
+    overflow  : auto;
+    height    : calc(100vh - 120px);
+    max-height: calc(100vh - 120px);
+
 }
 
 table {
     min-width: 800px;
     width    : 100%;
 }
-
+.ecd-selected{
+    background: #a4fbd0;
+}
 .ecd-btn__end {
     align-items    : end;
     justify-content: end;
@@ -126,11 +130,15 @@ table {
 .mat-column-sales {
     white-space: nowrap;
     padding    : 0 5px;
-    text-align: right;
+    text-align : right;
 }
 
 .mat-column-name {
-    min-width: 267px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 267px;
+    max-width: 267px;
 }
 
 .ecd-chk__box-pos {

@@ -13,6 +13,7 @@ export class TableComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @Output() evShowDataDetail = new EventEmitter();
   checkAll = false;
+  rowSelected = {};
   pagination = {
     page: 1,
     pageSize: 10,

@@ -20,6 +20,7 @@ export class CategoryDetailComponent implements OnInit {
   listShopShopee = [];
   listShopSendo = [];
   listShopLazada = [];
+  productDetail: any;
   constructor(
     private categoryService: CategoryService,
     private router: Router,
@@ -67,7 +68,9 @@ export class CategoryDetailComponent implements OnInit {
     this.showListProduct = true;
   }
 
-  openProduct() {
+  openProduct(event) {
+    console.log(event);
+    this.productDetail = event;
     this.showDetailProduct = true;
   }
   closeDetailProduct(event) {
