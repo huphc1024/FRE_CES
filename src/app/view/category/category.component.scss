@@ -1,36 +1,49 @@
 .display_flex {
     display: flex;
 }
+
 .mr-10p {
     margin-right: 10px;
 }
+
 .cuiso {
     cursor: pointer;
 }
+
 .card {
     box-shadow: #04040436 3px 3px;
-    height: 100px !important;
+    height    : 100px !important;
 }
+
 .image-category {
-    width: 20%;
-    height: 80%;
+    width  : 20%;
+    height : 80%;
     padding: 15px 0 0 15px;
 }
+
 .pd-unset {
     padding: unset !important;
 }
+
 .card-right {
-    height: 80%;
+    height : 80%;
     padding: 15px 0 0 15px;
 }
+
 .search {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
+
 .card-title:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
+
 .san-title {
-  color: #dc154c;
-  padding: 20px 0 20px 17px;
-  font-size: 36px;
+    color    : #dc154c;
+    padding  : 20px 0 20px 17px;
+    font-size: 36px;
+}
+
+.ecd-w__100 {
+    width: 100%;
 }
