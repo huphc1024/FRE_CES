@@ -32,6 +32,8 @@ import { CategoryDetailComponent } from './view/category-detail/category-detail.
 import { ProductDetailComponent } from './view/product-detail/product-detail.component';
 import {TooltipModule} from 'ng-bootstrap';
 import {JwtInterceptor} from './auth/jwt.interceptor';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import {JwtInterceptor} from './auth/jwt.interceptor';
     TabsComponent,
     CategoryComponent,
     CategoryDetailComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
