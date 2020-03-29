@@ -8,7 +8,6 @@ export class TableService {
     constructor(
         private http: HttpClient,
     ) { }
-    
     getShopeeProduct(catId, loadMore) {
         const param = new HttpParams()
             .set('categoryId', catId)
