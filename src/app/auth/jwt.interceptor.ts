@@ -14,7 +14,7 @@ export class JwtInterceptor implements HttpInterceptor {
     if (isPlatformBrowser(this.platformId)) {
       request = request.clone({
         setHeaders: {
-          ApplicationId: ApplicationProperties.APPLICATION_ID
+          Authorization: `Bearer ` + ApplicationProperties.APPLICATION_ID
         }
       });
     }

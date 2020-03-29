@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {PathAPI} from '../common/api_apth';
+import {HttpClient, HttpParams} from '@angular/common/http';
+import {PathAPI} from '../common/api_path';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,12 @@ export class LoginService {
     private http: HttpClient
   ) { }
 
-  getLogin() {
-    return this.http.get(PathAPI.GET_LOGIN);
+  login(username, password) {
+    const params = new HttpParams().set('userName', username).set('password', password);
+    return this.http.post(PathAPI.LOGIN, {}, {params});
+  }
+
+  logout() {
+    return this.http.get(PathAPI.LOGOUT);
   }
 }
