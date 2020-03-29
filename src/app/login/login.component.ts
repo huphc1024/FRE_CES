@@ -22,13 +22,16 @@ export class LoginComponent implements OnInit {
   valid = false;
 
   ngOnInit() {
-
+    const  user = localStorage.getItem('user');
+    if(user) {
+      this.route.navigate(['']);
+    }
   }
 
   login() {
     this.loginService.login(this.username, this.password).subscribe(res => {
       localStorage.setItem('user', JSON.stringify(res));
-      this.route.navigate(['']);
+      window.location.reload();
     }, error => {
       this.valid = true;
     });

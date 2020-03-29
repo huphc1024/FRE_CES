@@ -16,13 +16,13 @@ export class CategoryDetailComponent implements OnInit {
   showDetailProduct = false;
   parentName;
   isLoading = false;
-  listShopTiki = [];
+  productDetail: any;
   listShopShopee = [];
+  listShopTiki = [];
   listShopSendo = [];
   listShopLazada = [];
   constructor(
     private categoryService: CategoryService,
-    private router: Router,
     private route: ActivatedRoute
   ) { }
 
@@ -67,7 +67,9 @@ export class CategoryDetailComponent implements OnInit {
     this.showListProduct = true;
   }
 
-  openProduct() {
+  openProduct(event) {
+    console.log(event);
+    this.productDetail = event;
     this.showDetailProduct = true;
   }
   closeDetailProduct(event) {

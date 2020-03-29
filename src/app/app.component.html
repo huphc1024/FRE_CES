@@ -1,4 +1,4 @@
-<div class="container-scroller" *ngIf="isLogin">
+<div class="container-scroller" *ngIf="!isLogin">
   <app-navbar></app-navbar>
   <div class="container-fluid page-body-wrapper">
     <app-sidebar></app-sidebar>
@@ -10,4 +10,4 @@
     </div>
   </div>
 </div>
-<!--<router-outlet *ngIf="isLogin"></router-outlet>-->
+<router-outlet *ngIf="isLogin"></router-outlet>
