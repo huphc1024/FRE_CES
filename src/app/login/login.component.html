@@ -1,22 +1,21 @@
 <div class="login-layout">
   <div class="logo">
-    VINET Crawl
-    Ecommerce
-    Site
+    VINET
   </div>
+  <p>Crawl Ecommerce Site</p>
   <form class="forms-sample">
     <p class="error-message" *ngIf="valid">{{messageValid}}</p>
     <div class="form-group">
-      <label>Username</label>
-      <input type="username" name="username" class="form-control" [(ngModel)]="username" placeholder="Enter Username">
+      <label>Tên đăng nhập</label>
+      <input type="username" name="username" class="form-control" [(ngModel)]="username" placeholder="Tên đăng nhập">
     </div>
     <div class="form-group">
-      <label>Password</label>
-      <input type="password" name="password" class="form-control" [(ngModel)]="password"  placeholder="Password">
+      <label>Mật khẩu</label>
+      <input type="password" name="password" class="form-control" [(ngModel)]="password"  placeholder="Mật khẩu">
     </div>
     <div class="btn-submit">
-      <button type="submit" class="btn btn-success mr-2" (click)="login()">Login</button>
-      <button class="btn btn-light" routerLink="/sign-up">Sign up</button>
+      <button type="submit" class="btn btn-success mr-2" (click)="login()">Đăng nhập</button>
+      <!-- <button class="btn btn-light" routerLink="/sign-up">Sign up</button> -->
     </div>
   </form>
 </div>

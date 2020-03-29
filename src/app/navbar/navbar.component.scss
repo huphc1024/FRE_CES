@@ -152,6 +152,10 @@
   }
 }
 
+.dropdown-item {
+  cursor: pointer;
+}
+
 @media (max-width:991px) {
   .navbar {
     &.default-layout {

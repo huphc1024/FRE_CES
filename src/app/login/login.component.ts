@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {LoginService} from './login.service';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { LoginService } from './login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,23 +14,22 @@ export class LoginComponent implements OnInit {
     private route: Router
   ) {
   }
-
   loginLayout: any;
   username;
   password;
-  messageValid = 'Username hoặc mật khẩu sai';
+  messageValid = 'Tên đăng nhập hoặc mật khẩu không chính xác!';
   valid = false;
 
   ngOnInit() {
-    const  user = localStorage.getItem('user');
-    if(user) {
+    const userInfo = localStorage.getItem('userInfo');
+    if (userInfo) {
       this.route.navigate(['']);
     }
   }
 
   login() {
     this.loginService.login(this.username, this.password).subscribe(res => {
-      localStorage.setItem('user', JSON.stringify(res));
+      localStorage.setItem('userInfo', JSON.stringify(res));
       window.location.reload();
     }, error => {
       this.valid = true;

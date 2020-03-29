@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
-import {LoginService} from '../login/login.service';
-import {Router} from '@angular/router';
+import { LoginService } from '../login/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -20,20 +20,25 @@ export class NavbarComponent implements OnInit {
       document.querySelector('.sidebar-offcanvas').classList.remove('active');
     }
   }
+
   constructor(config: NgbDropdownConfig,
-              private loginService: LoginService,
-              private router: Router
-  ) {
+    private loginService: LoginService,
+    private router: Router) {
     config.placement = 'bottom-right';
   }
+
+  user: any = {};
+
   ngOnInit() {
+    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    this.user = userInfo.user;
   }
 
   logout() {
-    this.loginService.logout().subscribe( res => {
-      localStorage.removeItem('user');
-      this.router.navigate(['/login']);
-    })
+    // this.loginService.logout().subscribe(res => {
+      localStorage.removeItem('userInfo');
+      window.location.href = '/login';
+    // })
   }
 
 }
