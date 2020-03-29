@@ -8,10 +8,18 @@ export class TableService {
     constructor(
         private http: HttpClient,
     ) { }
-    getListShopee(catId, loadMore) {
+    
+    getShopeeProduct(catId, loadMore) {
         const param = new HttpParams()
-        .set('categoryId', catId)
-        .set('loadMore', loadMore);
-        return this.http.get(PathAPI.GET_GERSHOPEEPRODUCT, {params: param});
+            .set('categoryId', catId)
+            .set('loadMore', loadMore);
+        return this.http.get(PathAPI.GET_SHOPEE_PRODUCT, { params: param });
+    }
+
+    getTikiProduct(catId, loadMore) {
+        const param = new HttpParams()
+            .set('categoryId', catId)
+            .set('loadMore', loadMore);
+        return this.http.get(PathAPI.GET_TIKI_PRODUCT, { params: param });
     }
 }

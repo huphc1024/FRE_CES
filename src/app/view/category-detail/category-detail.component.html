@@ -1,5 +1,5 @@
 <div class="main">
-  <div class="search">
+  <!-- <div class="search">
     <form class="forms-sample display_flex">
       <div class="col-md-2"></div>
       <div class="form-group col-md-6">
@@ -10,7 +10,7 @@
         <button class="btn btn-light">Reset</button>
       </div>
     </form>
-  </div>
+  </div> -->
   <nav aria-label="breadcrumb" role="navigation">
     <ol class="breadcrumb breadcrumb-custom bg-inverse-primary">
       <li class="breadcrumb-item"><a href="category">Danh mục</a></li>
@@ -34,7 +34,7 @@
       </button>
     </div>
     <div class="card table-product" *ngIf="showProduct">
-      <div>
+      <!-- <div>
         <form class="forms-sample display_flex">
           <div class="col-md-6"></div>
           <div class="form-group col-md-4">
@@ -44,7 +44,7 @@
             <button type="submit" class="btn btn-success mr-2">Search</button>
           </div>
         </form>
-      </div>
+      </div> -->
       <div class="card-body">
         <app-table class="ecd-w__100" (evShowDataDetail)="openProduct($event)"></app-table>
       </div>
