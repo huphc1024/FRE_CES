@@ -1,0 +1,320 @@
+::ng-deep {
+
+    tr.mat-footer-row,
+    tr.mat-row {
+        height: 40px !important;
+    }
+
+    th.mat-sort-header-sorted {
+        color: black;
+    }
+
+    .pagination {
+        margin-bottom: 0;
+    }
+
+    td.mat-cell:first-of-type,
+    td.mat-footer-cell:first-of-type,
+    th.mat-header-cell:first-of-type {
+        padding-left: 0;
+    }
+
+    tr:hover {
+        background: whitesmoke;
+        cursor    : pointer;
+    }
+}
+
+.ecd-w-h__100 {
+    border    : 1px solid #ffbd6c;
+    overflow  : auto;
+    height    : calc(100vh - 120px);
+    max-height: calc(100vh - 120px);
+
+}
+
+table {
+    min-width: 800px;
+    width    : 100%;
+}
+
+.ecd-selected {
+    background: #a4fbd0;
+}
+
+.ecd-btn__end {
+    align-items    : end;
+    justify-content: end;
+    justify-content: flex-end;
+    display        : inline-flex;
+    width          : 100%;
+    margin-bottom  : 10px;
+}
+
+.ecd-pagination {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+}
+
+.pagination {
+    margin-bottom: 0;
+}
+
+.ecd-img__thumbnail {
+    width           : 35px;
+    height          : 35px;
+    border-radius   : 100%;
+    background-color: #fff;
+}
+
+.ecd-selected__row {
+    background-color: #ffbd6c;
+}
+.ced-row{
+    height: 40px;;
+}
+.la-line-scale-pulse-out,
+.la-line-scale-pulse-out>div {
+    position          : relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing   : border-box;
+    box-sizing        : border-box;
+}
+
+.la-line-scale-pulse-out {
+    display  : block;
+    font-size: 0;
+    color    : #fff;
+}
+
+.la-line-scale-pulse-out.la-dark {
+    color: #333;
+}
+
+.la-line-scale-pulse-out>div {
+    display         : inline-block;
+    float           : none;
+    background-color: currentColor;
+    border          : 0 solid currentColor;
+}
+
+.la-line-scale-pulse-out {
+    width : 40px;
+    height: 32px;
+}
+
+.la-line-scale-pulse-out>div {
+    width            : 4px;
+    height           : 32px;
+    margin           : 2px;
+    margin-top       : 0;
+    margin-bottom    : 0;
+    border-radius    : 0;
+    -webkit-animation: line-scale-pulse-out .9s infinite cubic-bezier(.85, .25, .37, .85);
+    -moz-animation   : line-scale-pulse-out .9s infinite cubic-bezier(.85, .25, .37, .85);
+    -o-animation     : line-scale-pulse-out .9s infinite cubic-bezier(.85, .25, .37, .85);
+    animation        : line-scale-pulse-out .9s infinite cubic-bezier(.85, .25, .37, .85);
+}
+
+.la-line-scale-pulse-out>div:nth-child(3) {
+    -webkit-animation-delay: -.9s;
+    -moz-animation-delay   : -.9s;
+    -o-animation-delay     : -.9s;
+    animation-delay        : -.9s;
+}
+
+.la-line-scale-pulse-out>div:nth-child(2),
+.la-line-scale-pulse-out>div:nth-child(4) {
+    -webkit-animation-delay: -.7s;
+    -moz-animation-delay   : -.7s;
+    -o-animation-delay     : -.7s;
+    animation-delay        : -.7s;
+}
+
+.la-line-scale-pulse-out>div:nth-child(1),
+.la-line-scale-pulse-out>div:nth-child(5) {
+    -webkit-animation-delay: -.5s;
+    -moz-animation-delay   : -.5s;
+    -o-animation-delay     : -.5s;
+    animation-delay        : -.5s;
+}
+
+.la-line-scale-pulse-out.la-sm {
+    width : 20px;
+    height: 16px;
+}
+
+.la-line-scale-pulse-out.la-sm>div {
+    width        : 2px;
+    height       : 16px;
+    margin       : 1px;
+    margin-top   : 0;
+    margin-bottom: 0;
+}
+
+.la-line-scale-pulse-out.la-2x {
+    width : 80px;
+    height: 64px;
+}
+
+.la-line-scale-pulse-out.la-2x>div {
+    width        : 8px;
+    height       : 45px;
+    margin       : 4px;
+    margin-top   : 0;
+    margin-bottom: 0;
+}
+
+.la-line-scale-pulse-out.la-3x {
+    width : 120px;
+    height: 96px;
+}
+
+.la-line-scale-pulse-out.la-3x>div {
+    width        : 8px;
+    height       : 45px;
+    margin-top   : 0;
+    margin-bottom: 0;
+}
+
+.ced-loading {
+    position        : fixed;
+    top             : 0;
+    height          : 100vh;
+    width           : 100vw;
+    z-index         : 1400;
+    left            : 0;
+    background-color: #2a2b3287;
+    overflow        : visible;
+
+    div {
+        top : 40%;
+        left: 45%;
+    }
+}
+
+.mat-column-select {
+    width     : 40px;
+    text-align: center;
+}
+
+.mat-column-index {
+    text-align : center;
+    white-space: nowrap;
+    min-width  : 40px;
+    padding    : 0 10px;
+}
+
+.mat-column-thumbnail_url {
+    width      : 60px;
+    text-align : center;
+    white-space: nowrap;
+    padding    : 0 5px;
+    left       : 40px !important;
+}
+
+.mat-column-image {
+    width      : 60px;
+    text-align : center;
+    white-space: nowrap;
+    padding    : 0 5px;
+    left       : 40px !important;
+}
+
+.mat-column-price {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-ctime {
+    text-align : center;
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-discount_rate {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-discount {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-review_count {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-favourite_count {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-rating_average {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-order_count {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+
+.mat-column-sales {
+    white-space: nowrap;
+    padding    : 0 5px;
+    text-align : right;
+}
+
+.mat-column-name {
+    white-space  : nowrap;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    width        : 267px;
+    max-width    : 267px;
+}
+
+.mat-column-stock {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-view_count {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-view_count {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-liked_count {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-cmt_count {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-rating_star {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.mat-column-historical_sold {
+    white-space: nowrap;
+    padding    : 0 5px;
+}
+
+.ecd-chk__box-pos {
+    top     : 4px;
+    position: relative;
+}

@@ -1,8 +1,8 @@
-import {Injectable, Inject, PLATFORM_ID} from '@angular/core';
-import {HttpRequest, HttpHandler, HttpEvent, HttpInterceptor} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {isPlatformBrowser} from '@angular/common';
-import {ApplicationProperties} from '../common/application.properties';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
+import { ApplicationProperties } from '../common/application.properties';
 
 
 @Injectable()
@@ -12,11 +12,14 @@ export class JwtInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (isPlatformBrowser(this.platformId)) {
-      request = request.clone({
-        setHeaders: {
-          ApplicationId: ApplicationProperties.APPLICATION_ID
-        }
-      });
+      const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+      if (userInfo && userInfo.access_token) {
+        request = request.clone({
+          setHeaders: {
+            Authorization: `Bearer ${userInfo.access_token}`
+          }
+        });
+      }
     }
     return next.handle(request);
   }

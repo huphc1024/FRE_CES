@@ -15,11 +15,13 @@ export class CategoryDetailComponent implements OnInit {
   showProduct = false;
   showDetailProduct = false;
   parentName;
-  isLoading = false;
-  listShop = [];
+  productDetail: any;
+  listShopShopee = [];
+  listShopTiki = [];
+  listShopSendo = [];
+  listShopLazada = [];
   constructor(
     private categoryService: CategoryService,
-    private router: Router,
     private route: ActivatedRoute
   ) { }
 
@@ -32,7 +34,17 @@ export class CategoryDetailComponent implements OnInit {
       this.listCategory = res;
     });
     this.categoryService.getListShop(id).subscribe( (res: any) => {
-      this.listShop = res.data.items;
+      switch (0) {
+        case id.indexOf('tiki'):
+          this.listShopTiki = res.filters[res.filters.length - 1].values;
+          break;
+        case id.indexOf('shopee'):
+          this.listShopShopee = res.data.items;
+          break;
+        case id.indexOf('sendo'):
+          this.listShopSendo = res.result.data;
+          break;
+      }
     })
     this.parentName = this.categoryService.categoryParrent;
   }
@@ -45,16 +57,14 @@ export class CategoryDetailComponent implements OnInit {
 
   loadProduct() {
     this.showProcess = true;
-    this.isLoading = true;
-    setTimeout( () => {
-      this.showProcess = false;
-      this.showProduct = true;
-      this.isLoading = false;
-    }, 3000);
+    this.showProduct = true;
+    this.showProcess = false;
     this.showListProduct = true;
   }
 
-  openProduct() {
+  openProduct(event) {
+    console.log(event);
+    this.productDetail = event;
     this.showDetailProduct = true;
   }
   closeDetailProduct(event) {
