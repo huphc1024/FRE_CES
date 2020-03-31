@@ -21,4 +21,11 @@ export class TableService {
             .set('loadMore', loadMore);
         return this.http.get(PathAPI.GET_TIKI_PRODUCT, { params: param });
     }
+
+    getSendoProduct(catId, loadMore) {
+        const param = new HttpParams()
+            .set('categoryId', catId)
+            .set('loadMore', loadMore);
+        return this.http.get(PathAPI.GET_SENDO_PRODUCT, { params: param });
+    }
 }

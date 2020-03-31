@@ -16,7 +16,8 @@
     td.mat-cell:first-of-type,
     td.mat-footer-cell:first-of-type,
     th.mat-header-cell:first-of-type {
-        padding-left: 0;
+        padding: 0px 12px !important;
+        left   : -1px !important;
     }
 
     tr:hover {
@@ -28,7 +29,6 @@
 .ecd-w-h__100 {
     border    : 1px solid #ffbd6c;
     overflow  : auto;
-    height    : calc(100vh - 120px);
     max-height: calc(100vh - 120px);
 
 }
@@ -72,9 +72,15 @@ table {
 .ecd-selected__row {
     background-color: #ffbd6c;
 }
-.ced-row{
-    height: 40px;;
+
+.ced-row {
+    height: 40px;
 }
+
+.ecd-virtual-scroll {
+    height: 300px;
+}
+
 .la-line-scale-pulse-out,
 .la-line-scale-pulse-out>div {
     position          : relative;
@@ -195,126 +201,92 @@ table {
     }
 }
 
+.ecd-nameprod {
+    color: #007eff;
+}
+
+td.mat-cell:last-of-type,
+td.mat-footer-cell:last-of-type,
+th.mat-header-cell:last-of-type {
+    border-left : unset !important;
+    box-shadow  : 3px 16px 2px 3px #abaaaa;
+    border-right: 1px solid #d0d0d0;
+    background  : #e49911;
+    color       : #fff;
+}
+
+th.mat-header-cell:last-of-type {
+    box-shadow : 4px -4px 3px 3px;
+    border-left: unset !important;
+    background : #e49911;
+    color      : #fff;
+}
+
+.mat-cell,
+.mat-header-cell {
+    white-space: nowrap;
+    padding    : 0 5px;
+    border-left: 1px solid #d4d4d44f
+}
+
 .mat-column-select {
     width     : 40px;
     text-align: center;
 }
 
 .mat-column-index {
-    text-align : center;
-    white-space: nowrap;
-    min-width  : 40px;
-    padding    : 0 10px;
+    text-align: center;
+    min-width : 40px;
+    padding   : 0 10px;
 }
 
 .mat-column-thumbnail_url {
-    width      : 60px;
-    text-align : center;
-    white-space: nowrap;
-    padding    : 0 5px;
-    left       : 40px !important;
+    width     : 60px;
+    text-align: center;
+    left      : 39px !important;
 }
 
 .mat-column-image {
-    width      : 60px;
-    text-align : center;
-    white-space: nowrap;
-    padding    : 0 5px;
-    left       : 40px !important;
-}
-
-.mat-column-price {
-    white-space: nowrap;
-    padding    : 0 5px;
+    width     : 60px;
+    text-align: center;
+    left      : 39px !important;
 }
 
 .mat-column-ctime {
-    text-align : center;
-    white-space: nowrap;
-    padding    : 0 5px;
+    text-align: center;
 }
-
-.mat-column-discount_rate {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
-.mat-column-discount {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
-.mat-column-review_count {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
-.mat-column-favourite_count {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
-.mat-column-rating_average {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
-.mat-column-order_count {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
 
 .mat-column-sales {
-    white-space: nowrap;
-    padding    : 0 5px;
-    text-align : right;
+    text-align: right;
 }
 
 .mat-column-name {
-    white-space  : nowrap;
     overflow     : hidden;
     text-overflow: ellipsis;
     width        : 267px;
     max-width    : 267px;
 }
 
-.mat-column-stock {
-    white-space: nowrap;
-    padding    : 0 5px;
+.mat-column-shop_name {
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    width        : 100px;
+    max-width    : 100px;
 }
-
-.mat-column-view_count {
-    white-space: nowrap;
-    padding    : 0 5px;
+.mat-column-shop_location {
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    width        : 100px;
+    max-width    : 100px;
 }
-
-.mat-column-view_count {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
-.mat-column-liked_count {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
-.mat-column-cmt_count {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
-.mat-column-rating_star {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
-.mat-column-historical_sold {
-    white-space: nowrap;
-    padding    : 0 5px;
-}
-
 .ecd-chk__box-pos {
     top     : 4px;
     position: relative;
+}
+
+.ecd-loading {
+    width   : 100%;
+    height  : 100%;
+    position: absolute;
+    top     : 0;
 }

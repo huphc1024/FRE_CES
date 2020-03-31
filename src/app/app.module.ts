@@ -40,6 +40,9 @@ import { TooltipModule } from 'ng-bootstrap';
 import { JwtInterceptor } from './auth/jwt.interceptor';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {TableVirtualScrollModule} from 'ng-table-virtual-scroll';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,13 +86,19 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatProgressBarModule,
+    TableVirtualScrollModule,
+    MatSnackBarModule
   ],
   exports: [
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatProgressBarModule,
+    TableVirtualScrollModule,
+    MatSnackBarModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]
