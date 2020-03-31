@@ -5,12 +5,12 @@
     </div>
     <div class="main">
       <div class="left">
-        <a class="btn-group btn-detail" target="_blank" href="https://shopee.vn/product-i.{{data.shopid}}.{{data.itemid}}"><p style="margin: 10px">Mở trang Shopee<p></p></a>
+        <a class="btn-group btn-detail" target="_blank" href="{{product.url}}"><p style="margin: 10px">Mở trang Shopee<p></p></a>
         <div class="summary">
-          <img [src]="data?.thumbnail_url">
-          <a class="name-product" href="#"><p class="mg-b30">{{data?.name}}</p></a>
-          <p class="price mg-b30">{{formatCurrency().format(data?.price)}}' VND'</p>
-          <p class="date-product mg-b30">2018-08-16</p>
+          <img [src]="product.image">
+          <a class="name-product" href="{{product.url}}"><p class="mg-b30">{{product.name}}</p></a>
+          <p class="price mg-b30">{{formatCurrency().format(product.price)}} VND</p>
+          <p class="date-product mg-b30" *ngIf="product.date">{{product.date}}</p>
         </div>
         <div class="statistical">
           <p>Thống kê</p>
@@ -212,6 +212,18 @@
           </table>
         </div>
       </div>
+    </div>
+  </div>
+  <div
+    class="loading"
+    *ngIf="isLoading"
+  >
+    <div class="la-line-scale-pulse-out la-3x">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
 </div>
