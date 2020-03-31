@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "heroku-postbuild": "ng build --prod",
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.14",
@@ -56,5 +57,9 @@
     "ts-node": "~8.6.2",
     "tslint": "~6.0.0",
     "typescript": "~3.4.5"
+  },
+  "engines": {
+    "node": "12.5.0",
+    "npm": "6.9.0"
   }
 }
