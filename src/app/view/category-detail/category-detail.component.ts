@@ -11,7 +11,7 @@ export class CategoryDetailComponent implements OnInit {
 
   listCategory: any = [];
   showListProduct = false;
-  showProcess = false;
+  isLoading = false;
   showProduct = false;
   showDetailProduct = false;
   parentName;
@@ -36,13 +36,19 @@ export class CategoryDetailComponent implements OnInit {
     this.categoryService.getListShop(id).subscribe( (res: any) => {
       switch (0) {
         case id.indexOf('tiki'):
-          this.listShopTiki = res.filters[res.filters.length - 1].values;
+          if (res) {
+            this.listShopTiki = res.filters[res.filters.length - 1].values;
+          }
           break;
         case id.indexOf('shopee'):
-          this.listShopShopee = res.data.items;
+          if (res) {
+            this.listShopShopee = res.data.items;
+          }
           break;
         case id.indexOf('sendo'):
-          this.listShopSendo = res.result.data;
+          if (res) {
+            this.listShopSendo = res.result.data;
+          }
           break;
       }
     })
@@ -56,9 +62,7 @@ export class CategoryDetailComponent implements OnInit {
   }
 
   loadProduct() {
-    this.showProcess = true;
     this.showProduct = true;
-    this.showProcess = false;
     this.showListProduct = true;
   }
 

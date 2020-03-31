@@ -17,4 +17,14 @@ export class ProductDetailService {
       .set('shopId', shopId);
     return this.http.get(PathAPI.GET_SHOPEE_PRODUCT_DETAIL, { params: param });
   }
+  getSendoProductDetail(urlPath) {
+    const param = new HttpParams()
+      .set('urlPath', urlPath)
+    return this.http.get(PathAPI.GET_SHOPEE_PRODUCT_DETAIL, { params: param });
+  }
+  getTikiProductDetail(urlPath) {
+    const param = new HttpParams()
+      .set('urlPath', urlPath)
+    return this.http.get(PathAPI.GET_SHOPEE_PRODUCT_DETAIL, { params: param });
+  }
 }
