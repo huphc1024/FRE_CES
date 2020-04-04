@@ -24,13 +24,82 @@
         background: whitesmoke;
         cursor    : pointer;
     }
+
+    .ngx-datatable.material .empty-row {
+        text-align: center;
+    }
+
+    .ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+        font-size   : 12px;
+        line-height : 1;
+        border-right: 1px solid #e0e0e0;
+    }
+
+    .ngx-datatable .datatable-body .datatable-body-row>div {
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
+        border-right: 1px solid #e0e0e0;
+        top         : 1px;
+    }
+
+    .ngx-datatable.material .datatable-body .datatable-row-left {
+        background-image: unset !important;
+    }
+
+    .ngx-datatable .datatable-row-right {
+        .datatable-header-cell {
+            margin-left        : -35px;
+            background-position: 0 0;
+            background-repeat  : repeat-y;
+            background         : #00ce68 !important;
+            color              : #fff !important;
+            background-image   : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAFklEQVQI12PQkNdi1VTQ5gbSwkAsDQARLAIGtOSFUAAAAABJRU5ErkJggg==);
+        }
+    }
+
+    .datatable-header-inner .ngx-datatable.material .datatable-header .datatable-row-right {
+        background-color: #fff !important;
+        color           : unset !important;
+    }
+
+    .ngx-datatable.material .datatable-body .datatable-row-right .datatable-body-cell {
+        background-color: #00ce68 !important;
+        color           : #fff !important;
+    }
+
+    .mat-menu-content {
+        padding: 0 !important;
+    }
+
+    .mat-menu-panel {
+        min-height: unset !important;
+    }
+    .row-selected{
+        background: #00ce68 !important;
+        color: #fff !important;
+    }
+}
+
+ngx-datatable {
+    height: 520px;
+    border: 1px solid #ffbd6c;
+}
+
+.ngx-img__thumbnail {
+    width           : 35px;
+    height          : 35px;
+    border-radius   : 100%;
+    background-color: #fff;
+    top             : -12px;
+    position        : relative;
+    left            : -8px;
 }
 
 .ecd-w-h__100 {
     border    : 1px solid #ffbd6c;
-    overflow  : auto;
-    max-height: calc(100vh - 120px);
-
+    text-align: center;
 }
 
 table {
@@ -43,12 +112,12 @@ table {
 }
 
 .ecd-btn__end {
-    align-items    : end;
-    justify-content: end;
-    justify-content: flex-end;
-    display        : inline-flex;
-    width          : 100%;
-    margin-bottom  : 10px;
+    align-items      : center;
+    justify-content  : space-around;
+    display          : -webkit-inline-box;
+    display          : flex;
+    width            : 100%;
+    margin-bottom    : 10px;
 }
 
 .ecd-pagination {
@@ -202,7 +271,8 @@ table {
 }
 
 .ecd-nameprod {
-    color: #007eff;
+    color : #007eff;
+    cursor: pointer;
 }
 
 td.mat-cell:last-of-type,
@@ -273,12 +343,14 @@ th.mat-header-cell:last-of-type {
     width        : 100px;
     max-width    : 100px;
 }
+
 .mat-column-shop_location {
     overflow     : hidden;
     text-overflow: ellipsis;
     width        : 100px;
     max-width    : 100px;
 }
+
 .ecd-chk__box-pos {
     top     : 4px;
     position: relative;

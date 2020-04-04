@@ -49,4 +49,6 @@
 @import "./assets/styles/misc";
 @import "./assets/styles/utilities";
 @import "./assets/styles/demo";
+@import '../node_modules/@swimlane/ngx-datatable/index.scss';
+@import '../node_modules/@swimlane/ngx-datatable/themes/material.scss';
 /* You can add global styles to this file, and also import other style files */
