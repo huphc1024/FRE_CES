@@ -25,8 +25,11 @@ import { TooltipModule } from 'ngx-bootstrap';
 import { JwtInterceptor } from './auth/jwt.interceptor';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { MatMenuModule } from '@angular/material/menu';
+import { FormatData } from './common/FormatData';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +43,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     TableComponent,
     LoginComponent,
     SignUpComponent,
-    TableComponent
+    TableComponent,
+    FormatData
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatSortModule,
     MatCheckboxModule,
     MatProgressBarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxDatatableModule,
+    MatMenuModule
   ],
   exports: [
     MatTableModule,
@@ -65,9 +71,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatSortModule,
     MatCheckboxModule,
     MatProgressBarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxDatatableModule,
+    MatMenuModule
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }, FormatData],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
